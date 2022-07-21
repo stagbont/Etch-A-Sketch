@@ -16,6 +16,58 @@
 <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <i class="uil uil-wall logo__img"></i>
+        </div>
+
+        <div class="title">
+            <h1>Etch-A-Sketch</h1>
+        </div>
+
+        div.sett__container {
+            <div class="setting__btn" id="setting-btn">
+                <i class="uil uil-setting setting__img"></i>
+            </div>
+
+            <ul class="settings__list">
+                <li class="settings__item">
+                    Pick a color
+                    <input type="color" id="colorPicker">
+                </li>
+
+                <li class="settings__item">
+                    <button class="rainbow__btn" id="rainbow-btn">
+                        Rainbow
+                    </button>
+                </li>
+
+                <li class="settings__item">
+                    <button class="reset__btn" id reset-btn>
+                        Reset
+                    </button>
+                </li>
+
+                <li class="settings__item">
+                    <span class="info">
+                        Slide to select<br>a number
+                    </span>
+
+                    <span class="selected__value" id="selected-value">
+
+                    </span>
+
+                    <input type="range" id="select__value" value="16">
+                </li>
+
+                <div class="close__btn" id="close-btn">
+                    <i class="uil uil-multiply"></i>
+                </div>
+            </ul>
+        }
+    </nav>
     
     <script src="asset/js/app.js"></script>
 </body>
