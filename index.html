@@ -27,15 +27,15 @@
             <h1>Etch-A-Sketch</h1>
         </div>
 
-        div.sett__container {
-            <div class="setting__btn" id="setting-btn">
-                <i class="uil uil-setting setting__img"></i>
-            </div>
+        <div class="setting__btn" id="setting-btn">
+            <i class="uil uil-setting setting__img"></i>
+        </div>
 
+        <div class="sett__container" id="sett-container">
             <ul class="settings__list">
                 <li class="settings__item">
                     Pick a color
-                    <input type="color" id="colorPicker">
+                    <input type="color" id="colorPicker" value="#FFFFFF">
                 </li>
 
                 <li class="settings__item">
@@ -59,14 +59,14 @@
 
                     </span>
 
-                    <input type="range" id="select__value" value="16">
+                    <input type="range" id="select__value" value="16" min-value="5" max-value="64">
                 </li>
 
                 <div class="close__btn" id="close-btn">
                     <i class="uil uil-multiply"></i>
                 </div>
             </ul>
-        }
+        </div>
     </nav>
     
     <script src="asset/js/app.js"></script>

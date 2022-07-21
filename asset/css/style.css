@@ -1,4 +1,10 @@
-
+:root {
+    --buttom: 20px;
+    --primary-color: #FFFFFF;
+    --secondary-color: #000000;
+    --secondaryLight-color: rgba(0, 0, 0, 0.5); 
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
 * {
     padding: 0;
@@ -6,6 +12,116 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+nav {
+    display: flex;
+    padding: 20px 20px 40px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__img {
+    font-size: 1.7rem;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.setting__img {
+    font-size: 1.75rem;
+    color: var(--secondaryLight-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.setting__img:hover {
+    color: var(--secondary-color);
+}
+
+.sett__container {
+    position: absolute;
+    z-index: 100;
+    padding: 20px;
+    top: 0px;
+    right: -1000px;
+    background: var(--primary-color);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: 0.3s cubic-bezier(0.94, 0.12, 1, 1);
+}
+
+.show__sett {
+    right: 0px;
+}
+
+.settings__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+input[type="color"] {
+    border: 0; 
+    cursor: pointer;
+    height: 100px;
+    padding: 0;
+    width: 100px;
+    background: transparent;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: #D9D9D9;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+input[type="range"] {
+    background-color: var(--secondaryLight-color);
+    
+}
+
+.close__btn {
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close__btn:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+
+
+
+
+
+
