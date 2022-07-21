@@ -96,11 +96,24 @@ button {
     background-color: #D9D9D9;
     font-size: 18px;
     font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.random__btn:hover {
+    box-shadow: var(--shadow);
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.random__btn:active {
+    box-shadow: none;
+    transform: scale(1);
 }
 
 input[type="range"] {
     background-color: var(--secondaryLight-color);
-    
 }
 
 .close__btn {
@@ -121,6 +134,24 @@ input[type="range"] {
     box-shadow: var(--shadow);
 }
 
+.reset__btn:hover {
+    box-shadow: var(--shadow);
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.reset__btn:active {
+    box-shadow: none;
+    transform: scale(1);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .main__container {
     display: grid;
     width: 330px;
@@ -129,3 +160,12 @@ input[type="range"] {
     border: 2px solid var(--secondary-color);
 }
 
+@media screen and (min-width = 500px){
+    .main__container {
+        display: grid;
+        width: 460px;
+        height: 460px;
+        margin: 20px;
+        border: 2px solid var(--secondary-color);
+    }
+}

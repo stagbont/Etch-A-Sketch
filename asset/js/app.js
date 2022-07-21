@@ -31,6 +31,7 @@ const selectedValue = document.getElementById("selected-value");
 // assign default range value to the selected value
 selectedValue.textContent = selectValue.value;
 var value = selectValue.value;
+// Default main calls for the functions to work
 generateGrid(value, value);
 generateSquares(value);
 setDefaultBackground();
@@ -103,3 +104,58 @@ function colorPicker() {
 function colorUpdate() {
     this.setAttribute('value', this.value);
 }
+
+// get the reset button element
+const resetBtn = document.getElementById("reset-btn");
+
+// listen for a click on the reset button
+resetBtn.addEventListener('click', reset);
+
+// reset button function
+function reset() {
+    setDefaultBackground();
+}
+
+// number slide
+function numberSlide() {
+    // get the number from the slider element
+    var slide = document.getElementById('select__value');
+    // listen for change and mousemove
+    slide.addEventListener('change', currentNumberUpdate);
+    slide.addEventListener('mousemove', currentNumberUpdate);
+}
+
+numberSlide();
+
+// color update function
+function currentNumberUpdate() {
+    // Change the value of this attribute to the current value
+    this.setAttribute('value', this.value);
+    // assign default range value to the selected value
+    selectedValue.textContent = selectValue.value;
+    var value = selectValue.value;
+    // Default main calls for the functions to work
+    generateGrid(value, value);
+    generateSquares(value);
+    setDefaultBackground();
+    listenForAClickAndMove()
+    colorPicker();
+}
+
+// Random color function
+function randomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    var colorPicker = document.getElementById('colorPicker');
+    colorPicker.setAttribute('value', `${color}`);
+}
+
+// get the rainbow button element
+const randomBtn = document.getElementById("random-btn");
+
+// listen for a click on the reset button
+randomBtn.addEventListener('click', randomColor);
