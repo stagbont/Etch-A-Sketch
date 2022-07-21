@@ -34,6 +34,7 @@ nav {
 
 .logo__img {
     font-size: 1.7rem;
+    cursor: pointer;
 }
 
 .title {
@@ -56,16 +57,17 @@ nav {
     position: absolute;
     z-index: 100;
     padding: 20px;
-    top: 0px;
-    right: -1000px;
+    top: -1000px;
+    right: 0px;
     background: var(--primary-color);
     border-radius: 15px;
     box-shadow: var(--shadow);
     transition: 0.3s cubic-bezier(0.94, 0.12, 1, 1);
+    overflow: hidden;
 }
 
 .show__sett {
-    right: 0px;
+    top: 0px;
 }
 
 .settings__list {
@@ -119,9 +121,11 @@ input[type="range"] {
     box-shadow: var(--shadow);
 }
 
-
-
-
-
-
+.main__container {
+    display: grid;
+    width: 330px;
+    height: 330px;
+    margin: 20px;
+    border: 2px solid var(--secondary-color);
+}
 
